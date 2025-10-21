@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, Key, Fingerprint, Cpu, Database, CheckCircle, Zap, Brain, Users } from 'lucide-react'
+import { ArrowLeft, Shield, Lock, Key, Fingerprint, Cpu, Database, Zap, Brain, Users } from 'lucide-react'
 
 export default function CryptographicAuthPage() {
   return (

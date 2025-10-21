@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, Eye, Key, Zap, CheckCircle, Brain, Cpu, Database, Users, Fingerprint } from 'lucide-react'
+import { ArrowLeft, Shield, Lock, Eye, Zap, CheckCircle, Brain, Cpu, Database } from 'lucide-react'
 
 export default function PrivacyFirstPage() {
   return (
@@ -59,7 +59,7 @@ export default function PrivacyFirstPage() {
             
             <div className="nyt-content" style={{marginBottom: '50px'}}>
               <p style={{fontSize: '1.8rem', marginBottom: '30px', fontWeight: '500'}}>
-                Privacy is not an afterthought—it's the foundation of everything we build
+                Privacy is not an afterthought—it&apos;s the foundation of everything we build
               </p>
               <p style={{color: 'rgba(255,255,255,0.9)', fontSize: '1.3rem', lineHeight: '1.6'}}>
                 Every feature, every interaction, and every piece of data is designed with privacy 

@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Shield, Lock, Eye, CheckCircle, Loader2, User, Settings } from 'lucide-react'
+import { ArrowLeft, Shield, Eye, CheckCircle, Loader2, User, Settings } from 'lucide-react'
 
 export default function LoginPage() {
   const [isAuthenticating, setIsAuthenticating] = useState(false)

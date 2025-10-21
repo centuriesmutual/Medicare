@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, Eye, User, MessageSquare, Star, CheckCircle, Zap, Brain, Users } from 'lucide-react'
+import { ArrowLeft, Shield, Lock, Eye, User, MessageSquare, CheckCircle, Users } from 'lucide-react'
 
 export default function AnonymousReviewsPage() {
   return (

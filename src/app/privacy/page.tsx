@@ -106,7 +106,7 @@ export default function PrivacyPolicyPage() {
                 <p>
                   This Privacy Policy explains how we collect, use, and protect your information in 
                   accordance with our privacy-first principles. Unlike traditional platforms that 
-                  collect and store personal data, we've built our system from the ground up to 
+                  collect and store personal data, we&apos;ve built our system from the ground up to 
                   protect your privacy through cryptographic certainty.
                 </p>
                 <div style={{
@@ -312,7 +312,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="nyt-headline medium">How We Use Your Information</h2>
               <div className="nyt-content">
                 <p>
-                  Since we don't collect personal information, we use the limited data we have access 
+                  Since we don&apos;t collect personal information, we use the limited data we have access 
                   to solely for the purpose of providing and improving our privacy-preserving platform:
                 </p>
                 
@@ -490,7 +490,7 @@ export default function PrivacyPolicyPage() {
               <h2 className="nyt-headline medium">Your Privacy Rights</h2>
               <div className="nyt-content">
                 <p>
-                  Since we don't collect personal information, traditional data subject rights don't 
+                  Since we don&apos;t collect personal information, traditional data subject rights don&apos;t 
                   apply in the same way. However, you have complete control over your anonymous 
                   participation on our platform:
                 </p>
@@ -550,7 +550,7 @@ export default function PrivacyPolicyPage() {
                       Content Control
                     </h3>
                     <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                      You can delete your anonymous reviews at any time. Since we don't know who 
+                      You can delete your anonymous reviews at any time. Since we don&apos;t know who 
                       you are, you control your content through your authentication keys.
                     </p>
                   </div>
@@ -577,7 +577,7 @@ export default function PrivacyPolicyPage() {
                       No Data Selling
                     </h3>
                     <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                      We never sell, rent, or share personal data because we don't collect any. 
+                      We never sell, rent, or share personal data because we don&apos;t collect any. 
                       Your privacy is protected by design.
                     </p>
                   </div>

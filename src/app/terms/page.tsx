@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FileText, AlertCircle, Shield, Users, Scale, Clock, CheckCircle, XCircle } from 'lucide-react'
+import { FileText, AlertCircle, Shield, Users, Clock, CheckCircle, XCircle } from 'lucide-react'
 
 export default function TermsOfServicePage() {
   return (
@@ -98,7 +98,7 @@ export default function TermsOfServicePage() {
               <h2 className="nyt-headline large">Acceptance of Terms</h2>
               <div className="nyt-content">
                 <p>
-                  Welcome to Medicare Reviews ("we," "our," or "us"). These Terms of Service ("Terms") 
+                  Welcome to Medicare Reviews (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). These Terms of Service (&quot;Terms&quot;) 
                   govern your use of our privacy-preserving healthcare review platform. By accessing 
                   or using our services, you agree to be bound by these Terms and our Privacy Policy.
                 </p>
@@ -422,7 +422,7 @@ export default function TermsOfServicePage() {
                         No Data Selling
                       </h4>
                       <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                        We never sell, rent, or share personal data because we don't collect any
+                        We never sell, rent, or share personal data because we don&apos;t collect any
                       </p>
                     </div>
                   </div>
@@ -547,7 +547,7 @@ export default function TermsOfServicePage() {
                     Disclaimer of Warranties
                   </h3>
                   <p style={{color: 'var(--nyt-black)', lineHeight: '1.6', marginBottom: '20px'}}>
-                    Our platform is provided "as is" without warranties of any kind. While we use 
+                    Our platform is provided &quot;as is&quot; without warranties of any kind. While we use 
                     industry-leading security measures, we cannot guarantee absolute security or 
                     uninterrupted service.
                   </p>

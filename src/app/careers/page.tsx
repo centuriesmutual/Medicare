@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { MapPin, Clock, Users, Zap, Shield, Heart, Globe, Code, Database, Lock } from 'lucide-react'
+import { MapPin, Clock, Users, Zap, Shield, Heart, Globe } from 'lucide-react'
 
 export default function CareersPage() {
   return (
@@ -81,7 +81,7 @@ export default function CareersPage() {
               <h2 className="nyt-headline large">Why Work With Medicare Reviews?</h2>
               <div className="nyt-content">
                 <p>
-                  At Medicare Reviews, we're not just building software – we're pioneering the future of 
+                  At Medicare Reviews, we&apos;re not just building software – we&apos;re pioneering the future of 
                   privacy-preserving technology in healthcare. Our team combines the best of cryptography, 
                   healthcare expertise, and user experience design to create tools that genuinely protect 
                   user privacy while fostering authentic community dialogue.

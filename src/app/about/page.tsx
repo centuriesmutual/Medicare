@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Shield, Users, Award, Heart, Globe, Lock } from 'lucide-react'
+import { Shield, Users, Award, Heart, Lock } from 'lucide-react'
 
 export default function AboutPage() {
   return (

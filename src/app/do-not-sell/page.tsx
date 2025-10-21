@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Shield, Lock, XCircle, CheckCircle, AlertTriangle, Database, Eye, Users, Heart, Scale } from 'lucide-react'
+import { Shield, Lock, XCircle, CheckCircle, AlertTriangle, Database, Eye } from 'lucide-react'
 
 export default function DoNotSellMyDataPage() {
   return (
@@ -61,7 +61,7 @@ export default function DoNotSellMyDataPage() {
             margin: '0 auto',
             opacity: '0.95'
           }}>
-            We don't sell your data because we don't collect it. Our zero-knowledge proof technology 
+            We don&apos;t sell your data because we don&apos;t collect it. Our zero-knowledge proof technology 
             ensures your personal information never reaches our servers, making data selling impossible.
           </p>
         </div>
@@ -82,12 +82,12 @@ export default function DoNotSellMyDataPage() {
               <div className="nyt-content">
                 <p>
                   Unlike traditional platforms that collect and monetize your personal data, Medicare Reviews 
-                  is built on a fundamentally different principle: we don't collect personal information, 
-                  so we can't sell it. Our revolutionary zero-knowledge proof technology makes data selling 
+                  is built on a fundamentally different principle: we don&apos;t collect personal information, 
+                  so we can&apos;t sell it. Our revolutionary zero-knowledge proof technology makes data selling 
                   mathematically impossible.
                 </p>
                 <p>
-                  While other platforms ask you to "opt out" of data selling, we've eliminated the problem 
+                  While other platforms ask you to "opt out" of data selling, we&apos;ve eliminated the problem 
                   at its source. We can verify you're a real user without knowing who you are, where you are, 
                   or any other personal information about you.
                 </p>
@@ -121,7 +121,7 @@ export default function DoNotSellMyDataPage() {
               <div className="nyt-content">
                 <p>
                   Traditional data brokers collect and sell hundreds of data points about users. 
-                  Here's what we don't collect, making data selling impossible:
+                  Here's what we don&apos;t collect, making data selling impossible:
                 </p>
                 
                 <div style={{
@@ -319,7 +319,7 @@ export default function DoNotSellMyDataPage() {
                         Future-Proof Protection
                       </h4>
                       <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                        Even if our policies changed, we couldn't sell data we don't have
+                        Even if our policies changed, we couldn't sell data we don&apos;t have
                       </p>
                     </div>
                   </div>
@@ -399,7 +399,7 @@ export default function DoNotSellMyDataPage() {
                       <li>Collect zero personal data</li>
                       <li>Never store identity information</li>
                       <li>No third-party data sharing</li>
-                      <li>Cannot sell data (we don't have any)</li>
+                      <li>Cannot sell data (we don&apos;t have any)</li>
                       <li>No opt-out needed</li>
                       <li>Privacy protected by mathematics</li>
                     </ul>
@@ -414,7 +414,7 @@ export default function DoNotSellMyDataPage() {
               <div className="nyt-content">
                 <p>
                   Under laws like CCPA and GDPR, you have rights regarding your personal data. 
-                  Since we don't collect personal data, these rights don't apply, but here's how 
+                  Since we don&apos;t collect personal data, these rights don&apos;t apply, but here's how 
                   our approach provides even better protection:
                 </p>
                 
@@ -447,7 +447,7 @@ export default function DoNotSellMyDataPage() {
                       Right to Know
                     </h3>
                     <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                      You have the right to know what data we collect: none. We don't know who you are.
+                      You have the right to know what data we collect: none. We don&apos;t know who you are.
                     </p>
                   </div>
 
@@ -474,7 +474,7 @@ export default function DoNotSellMyDataPage() {
                       Right to Delete
                     </h3>
                     <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                      You have the right to delete your data: there's nothing to delete. We don't store it.
+                      You have the right to delete your data: there's nothing to delete. We don&apos;t store it.
                     </p>
                   </div>
 
@@ -501,7 +501,7 @@ export default function DoNotSellMyDataPage() {
                       Right to Opt-Out
                     </h3>
                     <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                      You have the right to opt-out of data selling: we can't sell data we don't have.
+                      You have the right to opt-out of data selling: we can&apos;t sell data we don&apos;t have.
                     </p>
                   </div>
 

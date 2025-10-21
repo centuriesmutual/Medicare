@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Shield, CheckCircle, AlertTriangle, FileCheck, Lock, Users, Database, Award, Scale, Clock } from 'lucide-react'
+import { Shield, CheckCircle, AlertTriangle, FileCheck, Lock, Users, Database, Award, Scale } from 'lucide-react'
 
 export default function HIPAACompliancePage() {
   return (
@@ -524,7 +524,7 @@ export default function HIPAACompliancePage() {
                       No Data Breach Risk
                     </h3>
                     <p style={{color: 'var(--nyt-gray)', fontSize: '0.9rem', lineHeight: '1.5'}}>
-                      Since we don't store personal health information, there's no risk of 
+                      Since we don&apos;t store personal health information, there's no risk of 
                       PHI data breaches affecting your privacy.
                     </p>
                   </div>

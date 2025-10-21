@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle, Users, Shield, Heart } from 'lucide-react'
+import { Mail, MapPin, Clock, Send, MessageCircle, Users, Shield, Heart } from 'lucide-react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
