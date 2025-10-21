@@ -2,11 +2,11 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, TrendingUp, Users, CheckCircle, Star } from 'lucide-react'
+import { ArrowLeft, Shield, Lock, Key, Fingerprint, Cpu, Database, CheckCircle, Zap, Brain, Users } from 'lucide-react'
 
-export default function AdNetworkPage() {
+export default function CryptographicAuthPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{backgroundColor: '#f8f9fa'}}>
       {/* NYT-Style Header */}
       <header className="nyt-header">
         <div className="nyt-container">
@@ -26,27 +26,44 @@ export default function AdNetworkPage() {
       {/* Hero Section */}
       <section style={{
         minHeight: '100vh',
-        backgroundColor: '#f8f9fa',
+        backgroundColor: 'var(--nyt-accent)',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        color: 'white',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
         <div className="nyt-container">
-          <div style={{textAlign: 'center', maxWidth: '800px', margin: '0 auto'}}>
-            <h1 className="nyt-headline large" style={{
-              fontSize: '4rem',
-              marginBottom: '30px',
-              color: 'var(--nyt-black)'
+          <div style={{textAlign: 'center', maxWidth: '900px', margin: '0 auto'}}>
+            <div style={{
+              width: '120px',
+              height: '120px',
+              backgroundColor: 'white',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '0 auto 40px',
+              color: 'var(--nyt-accent)'
             }}>
-              Earn Money from Your Reviews
+              <Fingerprint style={{width: '60px', height: '60px'}} />
+            </div>
+            
+            <h1 className="nyt-headline large" style={{
+              fontSize: '4.5rem',
+              marginBottom: '30px',
+              color: 'white'
+            }}>
+              Cryptographic Authentication
             </h1>
             
             <div className="nyt-content" style={{marginBottom: '50px'}}>
-              <p style={{fontSize: '1.5rem', marginBottom: '25px', fontWeight: '500'}}>
-                Get paid for writing anonymous Medicare reviews while viewing targeted healthcare ads.
+              <p style={{fontSize: '1.8rem', marginBottom: '30px', fontWeight: '500'}}>
+                Secure identity verification without compromising privacy
               </p>
-              <p style={{color: 'var(--nyt-gray)', fontSize: '1.2rem', lineHeight: '1.6'}}>
-                Our HIPAA-compliant platform pays you for your reviews and ad engagement while keeping your identity completely anonymous.
+              <p style={{color: 'rgba(255,255,255,0.9)', fontSize: '1.3rem', lineHeight: '1.6'}}>
+                Advanced cryptographic protocols that authenticate your identity and credentials 
+                while maintaining complete anonymity and privacy protection.
               </p>
             </div>
 
@@ -58,27 +75,30 @@ export default function AdNetworkPage() {
               marginTop: '50px'
             }}>
               <Link href="/earning" className="nyt-button" style={{
-                backgroundColor: 'var(--nyt-accent)',
+                backgroundColor: 'white',
+                color: 'var(--nyt-accent)',
                 padding: '20px 40px',
                 fontSize: '1.2rem',
                 transform: 'translateY(0)',
                 transition: 'all 0.3s ease'
               }}>
-                Start Earning
+                Start Authentication
               </Link>
-              <Link href="/" className="nyt-button" style={{
-                backgroundColor: 'var(--nyt-gray)',
+              <Link href="/zk-proofs" className="nyt-button" style={{
+                backgroundColor: 'rgba(255,255,255,0.2)',
+                color: 'white',
                 padding: '20px 40px',
-                fontSize: '1.2rem'
+                fontSize: '1.2rem',
+                border: '2px solid white'
               }}>
-                View Platform
+                Learn More
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Premium Ad Rates Section */}
+      {/* How It Works */}
       <section style={{
         minHeight: '100vh',
         backgroundColor: 'var(--nyt-white)',
@@ -87,13 +107,36 @@ export default function AdNetworkPage() {
         padding: '80px 0'
       }}>
         <div className="nyt-container">
+          <div style={{textAlign: 'center', marginBottom: '60px'}}>
+            <h2 className="nyt-headline large" style={{
+              fontSize: '3.5rem',
+              marginBottom: '30px',
+              color: 'var(--nyt-black)'
+            }}>
+              How Cryptographic Authentication Works
+            </h2>
+            <p style={{
+              fontSize: '1.3rem',
+              color: 'var(--nyt-gray)',
+              maxWidth: '700px',
+              margin: '0 auto'
+            }}>
+              Multi-layered security protocols that verify identity without exposing personal data
+            </p>
+          </div>
+          
           <div style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '80px',
-            alignItems: 'center'
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '40px',
+            marginBottom: '60px'
           }}>
-            <div>
+            <div style={{
+              padding: '40px',
+              backgroundColor: 'var(--nyt-cream)',
+              textAlign: 'center',
+              border: '2px solid var(--nyt-accent)'
+            }}>
               <div style={{
                 width: '80px',
                 height: '80px',
@@ -101,210 +144,35 @@ export default function AdNetworkPage() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '30px'
+                margin: '0 auto 30px',
+                color: 'white'
               }}>
-                <Shield style={{width: '40px', height: '40px', color: 'white'}} />
+                <Key style={{width: '40px', height: '40px'}} />
               </div>
-              
-              <h2 className="nyt-headline large" style={{
-                fontSize: '3rem',
-                marginBottom: '30px',
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                marginBottom: '20px',
                 color: 'var(--nyt-black)'
               }}>
-                How You Earn Money
-              </h2>
-              
-              <div className="nyt-content" style={{fontSize: '1.2rem', lineHeight: '1.8'}}>
-                <p style={{marginBottom: '25px'}}>
-                  Earn money by writing anonymous Medicare reviews and viewing targeted healthcare advertisements 
-                  from premium advertisers who want to reach Medicare beneficiaries.
-                </p>
-                <p style={{color: 'var(--nyt-gray)', fontSize: '1.1rem'}}>
-                  Your earnings are automatically deposited into your secure virtual wallet, and you can cash out 
-                  once you reach the minimum threshold.
-                </p>
-              </div>
-
-              <div style={{
-                display: 'flex',
-                gap: '20px',
-                marginTop: '40px',
-                flexWrap: 'wrap'
-              }}>
-                <div style={{
-                  padding: '20px',
-                  backgroundColor: 'var(--nyt-cream)',
-                  textAlign: 'center',
-                  flex: '1',
-                  minWidth: '150px'
-                }}>
-                  <div style={{fontSize: '2rem', fontWeight: '700', color: 'var(--nyt-accent)', marginBottom: '8px'}}>
-                    Reviews
-                  </div>
-                  <div style={{fontSize: '0.9rem', color: 'var(--nyt-gray)'}}>
-                    Write & Earn
-                  </div>
-                </div>
-                <div style={{
-                  padding: '20px',
-                  backgroundColor: 'var(--nyt-cream)',
-                  textAlign: 'center',
-                  flex: '1',
-                  minWidth: '150px'
-                }}>
-                  <div style={{fontSize: '2rem', fontWeight: '700', color: 'var(--nyt-accent)', marginBottom: '8px'}}>
-                    Ads
-                  </div>
-                  <div style={{fontSize: '0.9rem', color: 'var(--nyt-gray)'}}>
-                    View & Earn
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div style={{
-              backgroundColor: 'var(--nyt-accent)',
-              padding: '60px',
-              color: 'white'
-            }}>
-              <h3 style={{
-                fontSize: '2rem',
-                fontWeight: '700',
-                marginBottom: '20px'
-              }}>
-                Why You&apos;ll Love Earning Here
+                Key Generation
               </h3>
-              <ul style={{
-                listStyle: 'none',
-                padding: 0,
-                margin: 0
-              }}>
-                <li style={{
-                  marginBottom: '15px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px'
-                }}>
-                  <CheckCircle style={{width: '20px', height: '20px', color: 'white'}} />
-                  <span>Anonymous reviews keep you safe</span>
-                </li>
-                <li style={{
-                  marginBottom: '15px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px'
-                }}>
-                  <CheckCircle style={{width: '20px', height: '20px', color: 'white'}} />
-                  <span>Virtual wallet for secure earnings</span>
-                </li>
-                <li style={{
-                  marginBottom: '15px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px'
-                }}>
-                  <CheckCircle style={{width: '20px', height: '20px', color: 'white'}} />
-                  <span>HIPAA-compliant privacy protection</span>
-                </li>
-                <li style={{
-                  marginBottom: '15px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px'
-                }}>
-                  <CheckCircle style={{width: '20px', height: '20px', color: 'white'}} />
-                  <span>Flexible earning opportunities</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Engaged Audience Section */}
-      <section style={{
-        minHeight: '100vh',
-        backgroundColor: 'var(--nyt-cream)',
-        display: 'flex',
-        alignItems: 'center',
-        padding: '80px 0'
-      }}>
-        <div className="nyt-container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '80px',
-            alignItems: 'center'
-          }}>
-            <div style={{
-              background: 'white',
-              padding: '60px',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
-            }}>
-              <div style={{
-                width: '60px',
-                height: '60px',
-                backgroundColor: 'var(--nyt-accent)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '30px'
-              }}>
-                <Users style={{width: '30px', height: '30px', color: 'white'}} />
-              </div>
-              
-              <h3 style={{
-                fontSize: '2.5rem',
-                fontWeight: '700',
-                marginBottom: '30px',
-                color: 'var(--nyt-black)'
-              }}>
-                Your Earning Potential
-              </h3>
-              
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '20px',
-                marginBottom: '30px'
-              }}>
-                <div style={{
-                  padding: '20px',
-                  backgroundColor: 'var(--nyt-cream)',
-                  textAlign: 'center'
-                }}>
-                  <div style={{fontSize: '1.8rem', fontWeight: '700', color: 'var(--nyt-accent)'}}>
-                    Reviews
-                  </div>
-                  <div style={{fontSize: '0.9rem', color: 'var(--nyt-gray)'}}>
-                    Write & Earn
-                  </div>
-                </div>
-                <div style={{
-                  padding: '20px',
-                  backgroundColor: 'var(--nyt-cream)',
-                  textAlign: 'center'
-                }}>
-                  <div style={{fontSize: '1.8rem', fontWeight: '700', color: 'var(--nyt-accent)'}}>
-                    Ads
-                  </div>
-                  <div style={{fontSize: '0.9rem', color: 'var(--nyt-gray)'}}>
-                    View & Earn
-                  </div>
-                </div>
-              </div>
-              
               <p style={{
                 fontSize: '1.1rem',
-                lineHeight: '1.6',
-                color: 'var(--nyt-gray)'
+                color: 'var(--nyt-gray)',
+                lineHeight: '1.6'
               }}>
-                Earn money by sharing your Medicare experiences and viewing relevant healthcare advertisements. 
-                All earnings are tracked in your secure virtual wallet.
+                Generate unique cryptographic keys that serve as your digital identity 
+                without revealing any personal information.
               </p>
             </div>
             
-            <div>
+            <div style={{
+              padding: '40px',
+              backgroundColor: 'var(--nyt-cream)',
+              textAlign: 'center',
+              border: '2px solid var(--nyt-accent)'
+            }}>
               <div style={{
                 width: '80px',
                 height: '80px',
@@ -312,72 +180,69 @@ export default function AdNetworkPage() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginBottom: '30px'
-              }}>
-                <Lock style={{width: '40px', height: '40px', color: 'white'}} />
-              </div>
-              
-              <h2 className="nyt-headline large" style={{
-                fontSize: '3rem',
-                marginBottom: '30px',
-                color: 'var(--nyt-black)'
-              }}>
-                How You Earn
-              </h2>
-              
-              <div className="nyt-content" style={{fontSize: '1.2rem', lineHeight: '1.8'}}>
-                <p style={{marginBottom: '25px'}}>
-                  Write anonymous reviews about your Medicare experiences and view targeted healthcare 
-                  advertisements to earn money in your virtual wallet.
-                </p>
-                <p style={{color: 'var(--nyt-gray)', fontSize: '1.1rem'}}>
-                  Your identity remains completely anonymous while you earn money for sharing your 
-                  healthcare insights and engaging with relevant advertisements.
-                </p>
-              </div>
-
-              <div style={{
-                marginTop: '40px',
-                padding: '30px',
-                backgroundColor: 'var(--nyt-accent)',
+                margin: '0 auto 30px',
                 color: 'white'
               }}>
-                <h4 style={{
-                  fontSize: '1.3rem',
-                  fontWeight: '600',
-                  marginBottom: '15px'
-                }}>
-                  Earning Opportunities
-                </h4>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0
-                }}>
-                  <li style={{marginBottom: '8px', display: 'flex', justifyContent: 'space-between'}}>
-                    <span>Anonymous Review Writing</span>
-                    <span style={{fontWeight: '600'}}>✓</span>
-                  </li>
-                  <li style={{marginBottom: '8px', display: 'flex', justifyContent: 'space-between'}}>
-                    <span>Healthcare Ad Viewing</span>
-                    <span style={{fontWeight: '600'}}>✓</span>
-                  </li>
-                  <li style={{marginBottom: '8px', display: 'flex', justifyContent: 'space-between'}}>
-                    <span>Virtual Wallet Earnings</span>
-                    <span style={{fontWeight: '600'}}>✓</span>
-                  </li>
-                  <li style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <span>Secure Cash Out</span>
-                    <span style={{fontWeight: '600'}}>✓</span>
-                  </li>
-                </ul>
+                <Shield style={{width: '40px', height: '40px'}} />
               </div>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                marginBottom: '20px',
+                color: 'var(--nyt-black)'
+              }}>
+                Secure Verification
+              </h3>
+              <p style={{
+                fontSize: '1.1rem',
+                color: 'var(--nyt-gray)',
+                lineHeight: '1.6'
+              }}>
+                Advanced algorithms verify your credentials and identity while maintaining 
+                complete anonymity and privacy protection.
+              </p>
+            </div>
+            
+            <div style={{
+              padding: '40px',
+              backgroundColor: 'var(--nyt-cream)',
+              textAlign: 'center',
+              border: '2px solid var(--nyt-accent)'
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                backgroundColor: 'var(--nyt-accent)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 30px',
+                color: 'white'
+              }}>
+                <Lock style={{width: '40px', height: '40px'}} />
+              </div>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                marginBottom: '20px',
+                color: 'var(--nyt-black)'
+              }}>
+                Privacy Protection
+              </h3>
+              <p style={{
+                fontSize: '1.1rem',
+                color: 'var(--nyt-gray)',
+                lineHeight: '1.6'
+              }}>
+                Your personal information remains encrypted and anonymous while still 
+                proving your identity and credentials.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Privacy Protection Section */}
+      {/* Security Features */}
       <section style={{
         minHeight: '100vh',
         backgroundColor: 'var(--nyt-black)',
@@ -394,34 +259,22 @@ export default function AdNetworkPage() {
             alignItems: 'center'
           }}>
             <div>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                backgroundColor: 'var(--nyt-accent)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '30px'
-              }}>
-                <TrendingUp style={{width: '40px', height: '40px', color: 'white'}} />
-              </div>
-              
               <h2 className="nyt-headline large" style={{
-                fontSize: '3rem',
+                fontSize: '3.5rem',
                 marginBottom: '30px',
                 color: 'white'
               }}>
-                Your Privacy is Protected
+                Advanced Security Features
               </h2>
               
               <div className="nyt-content" style={{fontSize: '1.2rem', lineHeight: '1.8'}}>
                 <p style={{marginBottom: '25px'}}>
-                  Our HIPAA-compliant system keeps your identity completely anonymous while you earn money 
-                  from reviews and ad engagement.
+                  Our cryptographic authentication system employs cutting-edge security protocols 
+                  to ensure your identity is verified without compromising your privacy.
                 </p>
                 <p style={{color: 'var(--nyt-light-gray)', fontSize: '1.1rem'}}>
-                  We use advanced cryptographic techniques to ensure your privacy while still allowing you 
-                  to earn money through your virtual wallet.
+                  Multi-factor authentication, biometric verification, and zero-knowledge proofs 
+                  work together to create an unbreakable security framework.
                 </p>
               </div>
 
@@ -436,12 +289,12 @@ export default function AdNetworkPage() {
                   backgroundColor: 'rgba(255,255,255,0.1)',
                   textAlign: 'center'
                 }}>
-                  <Shield style={{width: '32px', height: '32px', color: 'var(--nyt-accent)', margin: '0 auto 15px'}} />
+                  <Cpu style={{width: '32px', height: '32px', color: 'var(--nyt-accent)', margin: '0 auto 15px'}} />
                   <h4 style={{fontSize: '1.1rem', fontWeight: '600', marginBottom: '8px'}}>
-                    HIPAA Compliant
+                    Multi-Factor Auth
                   </h4>
-                  <p style={{fontSize: '0.9rem', color: 'var(--nyt-light-gray)'}}>
-                    Meets federal healthcare data protection standards
+                  <p style={{fontSize: '0.9rem', opacity: 0.9}}>
+                    Multiple verification layers for maximum security
                   </p>
                 </div>
                 <div style={{
@@ -449,12 +302,12 @@ export default function AdNetworkPage() {
                   backgroundColor: 'rgba(255,255,255,0.1)',
                   textAlign: 'center'
                 }}>
-                  <Lock style={{width: '32px', height: '32px', color: 'var(--nyt-accent)', margin: '0 auto 15px'}} />
+                  <Brain style={{width: '32px', height: '32px', color: 'var(--nyt-accent)', margin: '0 auto 15px'}} />
                   <h4 style={{fontSize: '1.1rem', fontWeight: '600', marginBottom: '8px'}}>
-                    Zero-Knowledge
+                    AI-Powered
                   </h4>
-                  <p style={{fontSize: '0.9rem', color: 'var(--nyt-light-gray)'}}>
-                    Cryptographic proofs protect user identity
+                  <p style={{fontSize: '0.9rem', opacity: 0.9}}>
+                    Machine learning enhances security detection
                   </p>
                 </div>
               </div>
@@ -470,7 +323,7 @@ export default function AdNetworkPage() {
                 marginBottom: '30px',
                 color: 'white'
               }}>
-                Secure Earning Technology
+                Security Protocols
               </h3>
               
               <div style={{
@@ -487,10 +340,10 @@ export default function AdNetworkPage() {
                     fontWeight: '600',
                     marginBottom: '10px'
                   }}>
-                    Virtual Wallet
+                    End-to-End Encryption
                   </h4>
                   <p style={{fontSize: '0.95rem', opacity: 0.9}}>
-                    Secure earnings tracking without revealing your identity
+                    All data is encrypted from source to destination using military-grade algorithms
                   </p>
                 </div>
                 
@@ -503,10 +356,10 @@ export default function AdNetworkPage() {
                     fontWeight: '600',
                     marginBottom: '10px'
                   }}>
-                    Anonymous Reviews
+                    Biometric Verification
                   </h4>
                   <p style={{fontSize: '0.95rem', opacity: 0.9}}>
-                    Share your experiences while staying completely anonymous
+                    Advanced biometric authentication ensures only you can access your account
                   </p>
                 </div>
                 
@@ -519,10 +372,10 @@ export default function AdNetworkPage() {
                     fontWeight: '600',
                     marginBottom: '10px'
                   }}>
-                    Privacy Protection
+                    Zero-Knowledge Architecture
                   </h4>
                   <p style={{fontSize: '0.95rem', opacity: 0.9}}>
-                    HIPAA-compliant system protects your healthcare privacy
+                    System never stores or accesses your personal information
                   </p>
                 </div>
               </div>
@@ -531,7 +384,7 @@ export default function AdNetworkPage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
+      {/* Healthcare Applications */}
       <section style={{
         minHeight: '100vh',
         backgroundColor: '#f8f9fa',
@@ -546,27 +399,28 @@ export default function AdNetworkPage() {
               marginBottom: '30px',
               color: 'var(--nyt-black)'
             }}>
-              How You Start Earning
+              Healthcare Applications
             </h2>
             <p style={{
               fontSize: '1.3rem',
               color: 'var(--nyt-gray)',
-              maxWidth: '600px',
+              maxWidth: '700px',
               margin: '0 auto'
             }}>
-              A simple, secure process to start earning money from your Medicare reviews and ad engagement
+              Secure authentication for healthcare providers, patients, and insurance systems
             </p>
           </div>
           
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '40px',
-            alignItems: 'start'
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '40px'
           }}>
             <div style={{
-              textAlign: 'center',
-              position: 'relative'
+              padding: '40px',
+              backgroundColor: 'white',
+              border: '2px solid var(--nyt-accent)',
+              textAlign: 'center'
             }}>
               <div style={{
                 width: '80px',
@@ -576,58 +430,33 @@ export default function AdNetworkPage() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 30px',
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '2rem'
+                color: 'white'
               }}>
-                1
+                <Users style={{width: '40px', height: '40px'}} />
               </div>
               <h3 style={{
-                fontSize: '1.5rem',
+                fontSize: '1.8rem',
                 fontWeight: '700',
                 marginBottom: '20px',
                 color: 'var(--nyt-black)'
               }}>
-                Sign Up
+                Patient Authentication
               </h3>
               <p style={{
                 fontSize: '1.1rem',
                 color: 'var(--nyt-gray)',
-                lineHeight: '1.6',
-                marginBottom: '20px'
+                lineHeight: '1.6'
               }}>
-                Create your anonymous account and verify your Medicare status
+                Secure patient identity verification for medical appointments, 
+                prescription access, and healthcare services without compromising privacy.
               </p>
-              <div style={{
-                padding: '20px',
-                backgroundColor: 'var(--nyt-cream)',
-                border: '2px solid var(--nyt-accent)'
-              }}>
-                <h4 style={{
-                  fontSize: '1rem',
-                  fontWeight: '600',
-                  marginBottom: '10px',
-                  color: 'var(--nyt-accent)'
-                }}>
-                  Account Setup
-                </h4>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                  fontSize: '0.9rem',
-                  color: 'var(--nyt-gray)'
-                }}>
-                  <li style={{marginBottom: '5px'}}>• Anonymous profile creation</li>
-                  <li style={{marginBottom: '5px'}}>• Medicare verification</li>
-                  <li style={{marginBottom: '5px'}}>• Virtual wallet setup</li>
-                </ul>
-              </div>
             </div>
             
             <div style={{
-              textAlign: 'center',
-              position: 'relative'
+              padding: '40px',
+              backgroundColor: 'white',
+              border: '2px solid var(--nyt-accent)',
+              textAlign: 'center'
             }}>
               <div style={{
                 width: '80px',
@@ -637,181 +466,32 @@ export default function AdNetworkPage() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 margin: '0 auto 30px',
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '2rem'
+                color: 'white'
               }}>
-                2
+                <Database style={{width: '40px', height: '40px'}} />
               </div>
               <h3 style={{
-                fontSize: '1.5rem',
+                fontSize: '1.8rem',
                 fontWeight: '700',
                 marginBottom: '20px',
                 color: 'var(--nyt-black)'
               }}>
-                Write Reviews
+                Provider Verification
               </h3>
               <p style={{
                 fontSize: '1.1rem',
                 color: 'var(--nyt-gray)',
-                lineHeight: '1.6',
-                marginBottom: '20px'
+                lineHeight: '1.6'
               }}>
-                Share your Medicare experiences anonymously and start earning money
+                Verify healthcare provider credentials and qualifications while 
+                maintaining complete anonymity and protecting sensitive information.
               </p>
-              <div style={{
-                padding: '20px',
-                backgroundColor: 'var(--nyt-cream)',
-                border: '2px solid var(--nyt-accent)'
-              }}>
-                <h4 style={{
-                  fontSize: '1rem',
-                  fontWeight: '600',
-                  marginBottom: '10px',
-                  color: 'var(--nyt-accent)'
-                }}>
-                  Review Features
-                </h4>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                  fontSize: '0.9rem',
-                  color: 'var(--nyt-gray)'
-                }}>
-                  <li style={{marginBottom: '5px'}}>• Anonymous posting</li>
-                  <li style={{marginBottom: '5px'}}>• Medicare plan reviews</li>
-                  <li style={{marginBottom: '5px'}}>• Healthcare experiences</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div style={{
-              textAlign: 'center',
-              position: 'relative'
-            }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                backgroundColor: 'var(--nyt-accent)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 30px',
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '2rem'
-              }}>
-                3
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '700',
-                marginBottom: '20px',
-                color: 'var(--nyt-black)'
-              }}>
-                View Ads
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                color: 'var(--nyt-gray)',
-                lineHeight: '1.6',
-                marginBottom: '20px'
-              }}>
-                View targeted healthcare advertisements and earn money for your engagement
-              </p>
-              <div style={{
-                padding: '20px',
-                backgroundColor: 'var(--nyt-cream)',
-                border: '2px solid var(--nyt-accent)'
-              }}>
-                <h4 style={{
-                  fontSize: '1rem',
-                  fontWeight: '600',
-                  marginBottom: '10px',
-                  color: 'var(--nyt-accent)'
-                }}>
-                  Ad Features
-                </h4>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                  fontSize: '0.9rem',
-                  color: 'var(--nyt-gray)'
-                }}>
-                  <li style={{marginBottom: '5px'}}>• Healthcare-focused ads</li>
-                  <li style={{marginBottom: '5px'}}>• Anonymous viewing</li>
-                  <li style={{marginBottom: '5px'}}>• Earning rewards</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div style={{
-              textAlign: 'center',
-              position: 'relative'
-            }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                backgroundColor: 'var(--nyt-accent)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                margin: '0 auto 30px',
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: '2rem'
-              }}>
-                4
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '700',
-                marginBottom: '20px',
-                color: 'var(--nyt-black)'
-              }}>
-                Cash Out
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                color: 'var(--nyt-gray)',
-                lineHeight: '1.6',
-                marginBottom: '20px'
-              }}>
-                Withdraw your earnings from your virtual wallet once you reach the minimum threshold
-              </p>
-              <div style={{
-                padding: '20px',
-                backgroundColor: 'var(--nyt-cream)',
-                border: '2px solid var(--nyt-accent)'
-              }}>
-                <h4 style={{
-                  fontSize: '1rem',
-                  fontWeight: '600',
-                  marginBottom: '10px',
-                  color: 'var(--nyt-accent)'
-                }}>
-                  Withdrawal Options
-                </h4>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                  fontSize: '0.9rem',
-                  color: 'var(--nyt-gray)'
-                }}>
-                  <li style={{marginBottom: '5px'}}>• Virtual wallet tracking</li>
-                  <li style={{marginBottom: '5px'}}>• Secure cash out</li>
-                  <li style={{marginBottom: '5px'}}>• Multiple payment methods</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final Call to Action Section */}
+      {/* Call to Action */}
       <section style={{
         minHeight: '100vh',
         backgroundColor: 'var(--nyt-accent)',
@@ -827,7 +507,7 @@ export default function AdNetworkPage() {
               marginBottom: '30px',
               color: 'white'
             }}>
-              Ready to Start Earning?
+              Secure Your Healthcare Identity
             </h2>
             
             <p style={{
@@ -836,7 +516,7 @@ export default function AdNetworkPage() {
               opacity: 0.9,
               lineHeight: '1.6'
             }}>
-              Join thousands of Medicare beneficiaries already earning money from their reviews and ad engagement.
+              Experience the future of secure, private healthcare authentication.
             </p>
             
             <div style={{
@@ -853,16 +533,16 @@ export default function AdNetworkPage() {
                 fontSize: '1.2rem',
                 fontWeight: '600'
               }}>
-                Start Earning
+                Start Authentication
               </Link>
-              <Link href="/" className="nyt-button" style={{
+              <Link href="/zk-proofs" className="nyt-button" style={{
                 backgroundColor: 'rgba(255,255,255,0.2)',
                 color: 'white',
                 padding: '20px 40px',
                 fontSize: '1.2rem',
                 border: '2px solid white'
               }}>
-                View Platform
+                Learn More
               </Link>
             </div>
             
@@ -877,20 +557,20 @@ export default function AdNetworkPage() {
                 backgroundColor: 'rgba(255,255,255,0.1)',
                 textAlign: 'center'
               }}>
-                <CheckCircle style={{width: '40px', height: '40px', color: 'white', margin: '0 auto 20px'}} />
+                <Shield style={{width: '40px', height: '40px', color: 'white', margin: '0 auto 20px'}} />
                 <h3 style={{
                   fontSize: '1.3rem',
                   fontWeight: '600',
                   marginBottom: '15px'
                 }}>
-                  Anonymous Reviews
+                  HIPAA Compliant
                 </h3>
                 <p style={{
                   fontSize: '1rem',
                   opacity: 0.9,
                   lineHeight: '1.5'
                 }}>
-                  Share your Medicare experiences while staying completely anonymous
+                  Meets all federal healthcare privacy requirements
                 </p>
               </div>
               
@@ -899,20 +579,20 @@ export default function AdNetworkPage() {
                 backgroundColor: 'rgba(255,255,255,0.1)',
                 textAlign: 'center'
               }}>
-                <Users style={{width: '40px', height: '40px', color: 'white', margin: '0 auto 20px'}} />
+                <Lock style={{width: '40px', height: '40px', color: 'white', margin: '0 auto 20px'}} />
                 <h3 style={{
                   fontSize: '1.3rem',
                   fontWeight: '600',
                   marginBottom: '15px'
                 }}>
-                  Virtual Wallet
+                  Military-Grade Security
                 </h3>
                 <p style={{
                   fontSize: '1rem',
                   opacity: 0.9,
                   lineHeight: '1.5'
                 }}>
-                  Secure earnings tracking and easy cash out options
+                  Advanced encryption protects your identity and data
                 </p>
               </div>
               
@@ -921,20 +601,20 @@ export default function AdNetworkPage() {
                 backgroundColor: 'rgba(255,255,255,0.1)',
                 textAlign: 'center'
               }}>
-                <Star style={{width: '40px', height: '40px', color: 'white', margin: '0 auto 20px'}} />
+                <Zap style={{width: '40px', height: '40px', color: 'white', margin: '0 auto 20px'}} />
                 <h3 style={{
                   fontSize: '1.3rem',
                   fontWeight: '600',
                   marginBottom: '15px'
                 }}>
-                  HIPAA Protected
+                  Instant Verification
                 </h3>
                 <p style={{
                   fontSize: '1rem',
                   opacity: 0.9,
                   lineHeight: '1.5'
                 }}>
-                  Your healthcare privacy is protected by federal standards
+                  Real-time authentication without compromising privacy
                 </p>
               </div>
             </div>

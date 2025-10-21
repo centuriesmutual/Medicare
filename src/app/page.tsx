@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Plus } from 'lucide-react'
+import { motion } from 'framer-motion'
 import PostReview from '@/components/PostReview'
 import ZKAuth from '@/components/ZKAuth'
 
@@ -81,11 +82,22 @@ export default function Home() {
           {/* Main Content */}
           <div className="nyt-main">
             {/* Lead Story */}
-            <article className="nyt-article featured" style={{position: 'relative', paddingBottom: '50px'}}>
+            <motion.article 
+              className="nyt-article featured" 
+              style={{position: 'relative', paddingBottom: '50px'}}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <div className="nyt-quote">&ldquo;</div>
-              <h1 className="nyt-headline large">
+              <motion.h1 
+                className="nyt-headline large"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
                 Anonymous Reviews Revolutionize Community Feedback
-              </h1>
+              </motion.h1>
               <div className="nyt-byline">
                 By Medicare Reviews Editorial Staff • {getCurrentDate()}
               </div>
@@ -128,7 +140,7 @@ export default function Home() {
                   Read More
                 </Link>
               </div>
-            </article>
+            </motion.article>
 
             <div className="nyt-divider"></div>
 
@@ -174,7 +186,12 @@ export default function Home() {
           </div>
 
           {/* Sidebar */}
-          <div className="nyt-sidebar">
+          <motion.div 
+            className="nyt-sidebar"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             {/* Authentication Section */}
             <div className="nyt-sidebar-section">
               <h3 className="nyt-sidebar-title">Authentication</h3>
@@ -212,22 +229,27 @@ export default function Home() {
               </div>
             </div>
 
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Professional Footer */}
-      <footer style={{
-        backgroundColor: 'var(--nyt-black)',
-        color: 'var(--nyt-cream)',
-        padding: '40px 0',
-        marginTop: '60px',
-        borderTop: '3px solid var(--nyt-accent)'
-      }}>
+      <motion.footer 
+        style={{
+          backgroundColor: 'var(--nyt-black)',
+          color: 'var(--nyt-cream)',
+          padding: '40px 0',
+          marginTop: '60px',
+          borderTop: '3px solid var(--nyt-accent)'
+        }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
         <div className="nyt-container">
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(4, 1fr)',
             gap: '30px',
             marginBottom: '25px'
           }}>
@@ -270,7 +292,7 @@ export default function Home() {
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em'
               }}>
-                Technology
+                Platform
               </h4>
               <ul style={{
                 listStyle: 'none',
@@ -278,24 +300,44 @@ export default function Home() {
                 margin: 0
               }}>
                 <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                  <Link href="/zk-proofs" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
                     Zero-Knowledge Proofs
-                  </span>
+                  </Link>
                 </li>
                 <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                  <Link href="/cryptographic-auth" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
                     Cryptographic Authentication
-                  </span>
+                  </Link>
                 </li>
                 <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                  <Link href="/anonymous-reviews" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
                     Anonymous Reviews
-                  </span>
+                  </Link>
                 </li>
                 <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                  <Link href="/privacy-first" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
                     Privacy-First Design
-                  </span>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -310,37 +352,114 @@ export default function Home() {
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em'
               }}>
-                Contact
+                Company
               </h4>
-              <div style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem', lineHeight: '1.5'}}>
-                <p style={{marginBottom: '6px'}}>
-                  <a href="mailto:editor@medicarereviews.com" style={{
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/about" style={{
                     color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
                     textDecoration: 'none',
                     transition: 'color 0.2s ease'
                   }}>
-                    Editorial: editor@medicarereviews.com
-                  </a>
-                </p>
-                <p style={{marginBottom: '6px'}}>
-                  <a href="mailto:support@medicarereviews.com" style={{
+                    About Us
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/careers" style={{
                     color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
                     textDecoration: 'none',
                     transition: 'color 0.2s ease'
                   }}>
-                    Technical Support: support@medicarereviews.com
-                  </a>
-                </p>
-                <p style={{marginBottom: '6px'}}>
-                  <a href="mailto:privacy@medicarereviews.com" style={{
+                    Careers
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/press" style={{
                     color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
                     textDecoration: 'none',
                     transition: 'color 0.2s ease'
                   }}>
-                    Privacy Inquiries: privacy@medicarereviews.com
-                  </a>
-                </p>
-              </div>
+                    Press
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/contact" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                color: 'var(--nyt-cream)',
+                marginBottom: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                Legal
+              </h4>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/privacy" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/terms" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Terms of Service
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/do-not-sell" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Do Not Sell My Data
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/compliance" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    HIPAA Compliance
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
           
@@ -364,31 +483,24 @@ export default function Home() {
               gap: '20px',
               fontSize: '0.85rem'
             }}>
-              <a href="#" style={{
+              <Link href="/sitemap" style={{
                 color: 'var(--nyt-light-gray)',
                 textDecoration: 'none',
                 transition: 'color 0.2s ease'
               }}>
-                Privacy Policy
-              </a>
-              <a href="#" style={{
+                Sitemap
+              </Link>
+              <Link href="/accessibility" style={{
                 color: 'var(--nyt-light-gray)',
                 textDecoration: 'none',
                 transition: 'color 0.2s ease'
               }}>
-                Terms of Service
-              </a>
-              <a href="#" style={{
-                color: 'var(--nyt-light-gray)',
-                textDecoration: 'none',
-                transition: 'color 0.2s ease'
-              }}>
-                About
-              </a>
+                Accessibility
+              </Link>
             </div>
           </div>
         </div>
-      </footer>
+      </motion.footer>
 
       {/* Post Review Modal */}
       {showPostForm && (
