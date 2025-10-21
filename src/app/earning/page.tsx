@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, CheckCircle, UserPlus, Eye, Key, Zap, AlertCircle } from 'lucide-react'
+import { ArrowLeft, Shield, CheckCircle, Key, Zap } from 'lucide-react'
 
 export default function EarningPage() {
   const [showSignupModal, setShowSignupModal] = useState(false)
@@ -310,7 +310,7 @@ export default function EarningPage() {
                     lineHeight: '1.5',
                     marginBottom: '20px'
                   }}>
-                    We'll generate a cryptographic proof that you have a valid Medicare plan 
+                    We&apos;ll generate a cryptographic proof that you have a valid Medicare plan 
                     without revealing any personal information.
                   </p>
                   
