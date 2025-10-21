@@ -159,7 +159,7 @@ export default function Home() {
                     }}>
                       Learn More About Ad Network
                     </Link>
-                    <Link href="/partnership" className="nyt-button" style={{
+                    <Link href="/earning" className="nyt-button" style={{
                       backgroundColor: 'var(--nyt-gray)',
                       padding: '15px 30px',
                       fontSize: '1rem'
