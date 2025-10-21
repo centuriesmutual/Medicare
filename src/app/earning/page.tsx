@@ -7,7 +7,7 @@ import { ArrowLeft, Shield, CheckCircle, Key, Zap } from 'lucide-react'
 export default function EarningPage() {
   const [showSignupModal, setShowSignupModal] = useState(false)
   const [currentStep, setCurrentStep] = useState(1)
-  const [zkProof, setZkProof] = useState(null)
+  const [zkProof, setZkProof] = useState<string | null>(null)
   const [isGeneratingProof, setIsGeneratingProof] = useState(false)
 
   // Auto-open modal when page loads
