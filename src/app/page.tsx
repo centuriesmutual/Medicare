@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { MessageSquare, Shield, Eye, Plus, Heart, MessageCircle, BookOpen, Users, Star, TrendingUp, Calendar, Clock } from 'lucide-react'
-import ReviewCard from '@/components/ReviewCard'
+import { MessageSquare, Shield, Eye, Plus, Heart, MessageCircle, BookOpen, Users, Star, TrendingUp, Calendar } from 'lucide-react'
 import PostReview from '@/components/PostReview'
 import ZKAuth from '@/components/ZKAuth'
 
@@ -45,13 +44,6 @@ export default function Home() {
     setShowPostForm(false)
   }
 
-  const handleLike = (id: string) => {
-    setReviews(reviews.map(review => 
-      review.id === id 
-        ? { ...review, likes: review.likes + 1 }
-        : review
-    ))
-  }
 
   const getCurrentDate = () => {
     const now = new Date()
@@ -70,13 +62,13 @@ export default function Home() {
         <div className="nyt-container">
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             <div>
-              <a href="/" className="nyt-logo">Medicare Reviews</a>
+              <Link href="/" className="nyt-logo">Medicare Reviews</Link>
               <div className="nyt-tagline">Anonymous Reviews & Community Stories</div>
             </div>
             <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
-              <a href="/login" className="nyt-button" style={{padding: '8px 16px', fontSize: '0.85rem'}}>
+              <Link href="/login" className="nyt-button" style={{padding: '8px 16px', fontSize: '0.85rem'}}>
                 Login
-              </a>
+              </Link>
               <div className="nyt-date">{getCurrentDate()}</div>
             </div>
           </div>
@@ -90,7 +82,7 @@ export default function Home() {
           <div className="nyt-main">
             {/* Lead Story */}
             <article className="nyt-article featured" style={{position: 'relative', paddingBottom: '50px'}}>
-              <div className="nyt-quote">"</div>
+              <div className="nyt-quote">&ldquo;</div>
               <h1 className="nyt-headline large">
                 Anonymous Reviews Revolutionize Community Feedback
               </h1>
@@ -112,9 +104,9 @@ export default function Home() {
                   verified while maintaining complete anonymity.
                 </p>
                 <p>
-                  "This represents a paradigm shift in how we think about online privacy and community 
-                  feedback," said a spokesperson for the platform. "Users can now share their stories 
-                  with confidence, knowing their identity is protected by mathematical certainty."
+                  &ldquo;This represents a paradigm shift in how we think about online privacy and community 
+                  feedback,&rdquo; said a spokesperson for the platform. &ldquo;Users can now share their stories 
+                  with confidence, knowing their identity is protected by mathematical certainty.&rdquo;
                 </p>
               </div>
               <div style={{

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Heart, MessageCircle, Clock, Shield, Star, Quote } from 'lucide-react'
+import { Heart, MessageCircle, Clock, Shield } from 'lucide-react'
 
 interface Review {
   id: string

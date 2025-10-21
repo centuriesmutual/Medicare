@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { X, Send, Shield, Loader2, Quote, BookOpen } from 'lucide-react'
+import { X, Send, Shield, Loader2, BookOpen } from 'lucide-react'
 
 interface PostReviewProps {
   onPost: (content: string, proof: string) => void

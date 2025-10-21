@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, Eye, Users, TrendingUp } from 'lucide-react'
+import { ArrowLeft, Shield } from 'lucide-react'
 
 export default function ReadMorePage() {
   return (
@@ -27,7 +27,7 @@ export default function ReadMorePage() {
       <div className="nyt-container" style={{paddingTop: '40px', paddingBottom: '40px'}}>
         <div style={{maxWidth: '900px', margin: '0 auto'}}>
           <article className="nyt-article">
-            <div className="nyt-quote">"</div>
+            <div className="nyt-quote">&ldquo;</div>
             <h1 className="nyt-headline large">
               Anonymous Reviews Revolutionize Community Feedback
             </h1>
@@ -57,9 +57,9 @@ export default function ReadMorePage() {
               </p>
               
               <p>
-                "This represents a paradigm shift in how we think about online privacy and community 
-                feedback," said a spokesperson for the platform. "Users can now share their stories 
-                with confidence, knowing their identity is protected by mathematical certainty."
+                &ldquo;This represents a paradigm shift in how we think about online privacy and community 
+                feedback,&rdquo; said a spokesperson for the platform. &ldquo;Users can now share their stories 
+                with confidence, knowing their identity is protected by mathematical certainty.&rdquo;
               </p>
 
               <h2 className="nyt-headline medium" style={{marginTop: '40px', marginBottom: '20px'}}>
@@ -86,7 +86,7 @@ export default function ReadMorePage() {
               <p>
                 Healthcare providers and patients alike have long struggled with the challenge of 
                 obtaining honest feedback. Traditional review systems are often compromised by fear 
-                of retaliation, leading to sanitized or misleading reviews that don't reflect 
+                of retaliation, leading to sanitized or misleading reviews that don&apos;t reflect 
                 real experiences.
               </p>
               
