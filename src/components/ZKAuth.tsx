@@ -109,7 +109,7 @@ export default function ZKAuth({ onAuthenticated }: ZKAuthProps) {
           border: '1px solid var(--nyt-border)'
         }}>
           <Lock style={{width: '16px', height: '16px', color: 'var(--nyt-accent)'}} />
-          <span style={{fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase'}}>
+          <span style={{fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--nyt-black)'}}>
             Privacy First
           </span>
         </div>
@@ -123,7 +123,7 @@ export default function ZKAuth({ onAuthenticated }: ZKAuthProps) {
           border: '1px solid var(--nyt-border)'
         }}>
           <Eye style={{width: '16px', height: '16px', color: 'var(--nyt-accent)'}} />
-          <span style={{fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase'}}>
+          <span style={{fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--nyt-black)'}}>
             Anonymous
           </span>
         </div>
@@ -137,7 +137,7 @@ export default function ZKAuth({ onAuthenticated }: ZKAuthProps) {
           border: '1px solid var(--nyt-border)'
         }}>
           <Shield style={{width: '16px', height: '16px', color: 'var(--nyt-accent)'}} />
-          <span style={{fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase'}}>
+          <span style={{fontSize: '0.8rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--nyt-black)'}}>
             ZK Protected
           </span>
         </div>
