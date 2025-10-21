@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Shield, Lock, Eye, TrendingUp, Users, CheckCircle, Star } from 'lucide-react'
+import { ArrowLeft, Shield, Lock, TrendingUp, Users, CheckCircle, Star } from 'lucide-react'
 
 export default function AdNetworkPage() {
   return (

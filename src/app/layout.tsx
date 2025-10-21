@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   description: 'Anonymous review platform powered by zero-knowledge proofs',
   keywords: 'anonymous reviews, zero-knowledge proofs, privacy, healthcare reviews',
   authors: [{ name: 'Medicare Reviews Team' }],
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
