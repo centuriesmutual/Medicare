@@ -1,4 +1,4 @@
-# MediThreads - Anonymous Review Platform
+# Medicare Reviews - Anonymous Review Platform
 
 A professional threads clone for writing anonymous reviews powered by zero-knowledge proofs. Built with Next.js, TypeScript, and Tailwind CSS.
 
