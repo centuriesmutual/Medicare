@@ -172,7 +172,7 @@ export default function AdNetworkPage() {
                 fontWeight: '700',
                 marginBottom: '20px'
               }}>
-                Why You'll Love Earning Here
+                Why You&apos;ll Love Earning Here
               </h3>
               <ul style={{
                 listStyle: 'none',
