@@ -10,10 +10,6 @@ export default function EarningPage() {
   const [zkProof, setZkProof] = useState<string | null>(null)
   const [isGeneratingProof, setIsGeneratingProof] = useState(false)
 
-  // Auto-open modal when page loads
-  useEffect(() => {
-    setShowSignupModal(true)
-  }, [])
 
   const generateZKProof = async () => {
     setIsGeneratingProof(true)
@@ -578,7 +574,7 @@ export default function EarningPage() {
         <div className="nyt-container">
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(4, 1fr)',
             gap: '30px',
             marginBottom: '25px'
           }}>
@@ -629,24 +625,44 @@ export default function EarningPage() {
                 margin: 0
               }}>
                 <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                  <Link href="/zk-proofs" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Zero-Knowledge Proofs
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/cryptographic-auth" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Cryptographic Authentication
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/anonymous-reviews" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
                     Anonymous Reviews
-                  </span>
+                  </Link>
                 </li>
                 <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
-                    Ad Revenue Sharing
-                  </span>
-                </li>
-                <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
-                    Secure Payments
-                  </span>
-                </li>
-                <li style={{marginBottom: '6px'}}>
-                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
-                    HIPAA Compliant
-                  </span>
+                  <Link href="/privacy-first" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Privacy-First Design
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -661,37 +677,114 @@ export default function EarningPage() {
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em'
               }}>
-                Contact
+                Company
               </h4>
-              <div style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem', lineHeight: '1.5'}}>
-                <p style={{marginBottom: '6px'}}>
-                  <a href="mailto:earnings@medicarereviews.com" style={{
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/about" style={{
                     color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
                     textDecoration: 'none',
                     transition: 'color 0.2s ease'
                   }}>
-                    Earnings Support: earnings@medicarereviews.com
-                  </a>
-                </p>
-                <p style={{marginBottom: '6px'}}>
-                  <a href="mailto:support@medicarereviews.com" style={{
+                    About Us
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/careers" style={{
                     color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
                     textDecoration: 'none',
                     transition: 'color 0.2s ease'
                   }}>
-                    Technical Support: support@medicarereviews.com
-                  </a>
-                </p>
-                <p style={{marginBottom: '6px'}}>
-                  <a href="mailto:privacy@medicarereviews.com" style={{
+                    Careers
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/press" style={{
                     color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
                     textDecoration: 'none',
                     transition: 'color 0.2s ease'
                   }}>
-                    Privacy Inquiries: privacy@medicarereviews.com
-                  </a>
-                </p>
-              </div>
+                    Press
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/contact" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                color: 'var(--nyt-cream)',
+                marginBottom: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                Legal
+              </h4>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/privacy" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/terms" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Terms of Service
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/cookies" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <Link href="/compliance" style={{
+                    color: 'var(--nyt-light-gray)',
+                    fontSize: '0.85rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    HIPAA Compliance
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
           
@@ -715,26 +808,19 @@ export default function EarningPage() {
               gap: '20px',
               fontSize: '0.85rem'
             }}>
-              <Link href="/privacy" style={{
+              <Link href="/sitemap" style={{
                 color: 'var(--nyt-light-gray)',
                 textDecoration: 'none',
                 transition: 'color 0.2s ease'
               }}>
-                Privacy Policy
+                Sitemap
               </Link>
-              <Link href="/terms" style={{
+              <Link href="/accessibility" style={{
                 color: 'var(--nyt-light-gray)',
                 textDecoration: 'none',
                 transition: 'color 0.2s ease'
               }}>
-                Terms of Service
-              </Link>
-              <Link href="/about" style={{
-                color: 'var(--nyt-light-gray)',
-                textDecoration: 'none',
-                transition: 'color 0.2s ease'
-              }}>
-                About
+                Accessibility
               </Link>
             </div>
           </div>
