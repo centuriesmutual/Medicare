@@ -74,7 +74,7 @@ export default function ReadMorePage() {
               </p>
               
               <p>
-                The system works by generating cryptographic proofs that verify a user's authenticity 
+                The system works by generating cryptographic proofs that verify a user&apos;s authenticity 
                 without exposing their identity. This creates a trustless environment where honesty 
                 is incentivized while privacy is mathematically guaranteed.
               </p>

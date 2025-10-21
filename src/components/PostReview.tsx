@@ -12,7 +12,7 @@ export default function PostReview({ onPost, onCancel }: PostReviewProps) {
   const [content, setContent] = useState('')
   const [isGeneratingProof, setIsGeneratingProof] = useState(false)
 
-  const generateZKProof = async (content: string): Promise<string> => {
+  const generateZKProof = async (_content: string): Promise<string> => {
     // Simulate ZK proof generation
     // In a real implementation, this would use snarkjs or similar
     await new Promise(resolve => setTimeout(resolve, 2000))

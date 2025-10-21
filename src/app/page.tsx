@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { MessageSquare, Shield, Eye, Plus, Heart, MessageCircle, BookOpen, Users, Star, TrendingUp, Calendar } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import PostReview from '@/components/PostReview'
 import ZKAuth from '@/components/ZKAuth'
 
