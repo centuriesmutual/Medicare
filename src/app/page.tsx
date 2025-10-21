@@ -130,12 +130,41 @@ export default function Home() {
               </div>
             </article>
 
+            <div className="nyt-divider"></div>
           </div>
 
-          {/* Sidebar */}
-          <div className="nyt-sidebar">
-            {/* Authentication Section */}
-            <div className="nyt-sidebar-section">
+          {/* Full-Width Ad Network Section */}
+          <div style={{width: '100%', marginTop: '40px'}}>
+            <article className="nyt-article" style={{maxWidth: 'none', width: '100%'}}>
+              <h2 className="nyt-headline medium" style={{marginBottom: '20px', textAlign: 'center'}}>
+                HIPAA-Compliant Ad Network
+              </h2>
+              
+              <div className="nyt-content" style={{textAlign: 'center', maxWidth: '800px', margin: '0 auto'}}>
+                <p>
+                  Our platform utilizes HIPAA-compliant systems to verify user input and manage 
+                  disbursements through our secure ad network. All healthcare-related interactions 
+                  are processed through certified privacy-preserving protocols that meet federal 
+                  healthcare data protection standards.
+                </p>
+                
+                <p>
+                  The system ensures complete anonymity while providing healthcare organizations 
+                  with verified, aggregated insights for community health improvement initiatives.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div className="nyt-grid">
+            <div className="nyt-main">
+              {/* Empty main content for now */}
+            </div>
+
+            {/* Sidebar */}
+            <div className="nyt-sidebar">
+              {/* Authentication Section */}
+              <div className="nyt-sidebar-section">
               <h3 className="nyt-sidebar-title">Authentication</h3>
               {!isAuthenticated ? (
                 <ZKAuth onAuthenticated={() => setIsAuthenticated(true)} />
@@ -158,12 +187,182 @@ export default function Home() {
                 </div>
               )}
             </div>
-
-
-
           </div>
         </div>
       </div>
+
+      {/* Professional Footer */}
+      <footer style={{
+        backgroundColor: 'var(--nyt-black)',
+        color: 'var(--nyt-cream)',
+        padding: '40px 0',
+        marginTop: '60px',
+        borderTop: '3px solid var(--nyt-accent)'
+      }}>
+        <div className="nyt-container">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '30px',
+            marginBottom: '25px'
+          }}>
+            <div>
+              <h3 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '1.4rem',
+                fontWeight: '700',
+                color: 'var(--nyt-cream)',
+                marginBottom: '15px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                Medicare Reviews
+              </h3>
+              <p style={{
+                color: 'var(--nyt-light-gray)',
+                lineHeight: '1.5',
+                marginBottom: '10px',
+                fontSize: '0.9rem'
+              }}>
+                The premier platform for anonymous healthcare reviews powered by zero-knowledge proof technology.
+              </p>
+              <p style={{
+                color: 'var(--nyt-light-gray)',
+                fontSize: '0.85rem',
+                lineHeight: '1.4'
+              }}>
+                Your privacy is protected by cryptographic certainty.
+              </p>
+            </div>
+            
+            <div>
+              <h4 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                color: 'var(--nyt-cream)',
+                marginBottom: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                Technology
+              </h4>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                <li style={{marginBottom: '6px'}}>
+                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                    Zero-Knowledge Proofs
+                  </span>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                    Cryptographic Authentication
+                  </span>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                    Anonymous Reviews
+                  </span>
+                </li>
+                <li style={{marginBottom: '6px'}}>
+                  <span style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem'}}>
+                    Privacy-First Design
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 style={{
+                fontFamily: 'Playfair Display, serif',
+                fontSize: '1.1rem',
+                fontWeight: '600',
+                color: 'var(--nyt-cream)',
+                marginBottom: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                Contact
+              </h4>
+              <div style={{color: 'var(--nyt-light-gray)', fontSize: '0.85rem', lineHeight: '1.5'}}>
+                <p style={{marginBottom: '6px'}}>
+                  <a href="mailto:editor@medicarereviews.com" style={{
+                    color: 'var(--nyt-light-gray)',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Editorial: editor@medicarereviews.com
+                  </a>
+                </p>
+                <p style={{marginBottom: '6px'}}>
+                  <a href="mailto:support@medicarereviews.com" style={{
+                    color: 'var(--nyt-light-gray)',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Technical Support: support@medicarereviews.com
+                  </a>
+                </p>
+                <p style={{marginBottom: '6px'}}>
+                  <a href="mailto:privacy@medicarereviews.com" style={{
+                    color: 'var(--nyt-light-gray)',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s ease'
+                  }}>
+                    Privacy Inquiries: privacy@medicarereviews.com
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div style={{
+            borderTop: '1px solid var(--nyt-border)',
+            paddingTop: '20px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '20px'
+          }}>
+            <div style={{
+              color: 'var(--nyt-light-gray)',
+              fontSize: '0.85rem'
+            }}>
+              © 2025 Medicare Reviews. All rights reserved.
+            </div>
+            <div style={{
+              display: 'flex',
+              gap: '20px',
+              fontSize: '0.85rem'
+            }}>
+              <a href="#" style={{
+                color: 'var(--nyt-light-gray)',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease'
+              }}>
+                Privacy Policy
+              </a>
+              <a href="#" style={{
+                color: 'var(--nyt-light-gray)',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease'
+              }}>
+                Terms of Service
+              </a>
+              <a href="#" style={{
+                color: 'var(--nyt-light-gray)',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease'
+              }}>
+                About
+              </a>
+            </div>
+          </div>
+        </div>
 
       {/* Professional Footer */}
       <footer style={{
@@ -346,6 +545,7 @@ export default function Home() {
           onCancel={() => setShowPostForm(false)}
         />
       )}
+      </div>
     </div>
   )
 }
